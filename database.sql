@@ -64,3 +64,23 @@ ALTER TABLE messages
 ADD FOREIGN KEY (chat_room_id) REFERENCES chat_rooms(id);
 
 
+-- Insert sample data (replace the user ids first)
+INSERT INTO chat_rooms (id, last_message_id, unread_count) 
+VALUES 
+('8d162274-6cb8-4776-815a-8e721ebfb76d', NULL, 0);
+
+INSERT INTO messages (id, chat_room_id, sender_user_id, receiver_user_id, content, created_at) 
+VALUES 
+('de120f3a-dbca-4330-9e2e-18b55a2fb9e5', '8d162274-6cb8-4776-815a-8e721ebfb76d', '33f771e2-311b-4d4f-9b14-d1e1c59936d3', '94a6b01e-319e-494e-b454-98f22ab0d109', 'Hey! I am good, thanks.', '2023-12-01 01:00:10'),
+('29829a84-30b9-47e9-b6df-518519843f7d', '8d162274-6cb8-4776-815a-8e721ebfb76d', '94a6b01e-319e-494e-b454-98f22ab0d109', '33f771e2-311b-4d4f-9b14-d1e1c59936d3', 'Hey! How are you?', '2023-12-01 01:00:00');
+
+
+INSERT INTO chat_room_participants (chat_room_id, participant_id) 
+VALUES 
+('8d162274-6cb8-4776-815a-8e721ebfb76d', '33f771e2-311b-4d4f-9b14-d1e1c59936d3'),
+('8d162274-6cb8-4776-815a-8e721ebfb76d', '94a6b01e-319e-494e-b454-98f22ab0d109');
+
+UPDATE chat_rooms 
+SET last_message_id = 'de120f3a-dbca-4330-9e2e-18b55a2fb9e5'
+WHERE id = '8d162274-6cb8-4776-815a-8e721ebfb76d';
+

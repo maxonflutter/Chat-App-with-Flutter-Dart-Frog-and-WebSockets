@@ -24,10 +24,8 @@ Future<Response> _get(RequestContext context, String chatRoomId) async {
   final messageRepository = context.read<MessageRepository>();
 
   try {
-    final messages = messageRepository.fetchMessages(chatRoomId);
-    return Response.json(
-      body: {'messages': messages},
-    );
+    final messages = await messageRepository.fetchMessages(chatRoomId);
+    return Response.json(body: {'messages': messages});
   } catch (err) {
     return Response.json(
       body: {'error': err.toString()},

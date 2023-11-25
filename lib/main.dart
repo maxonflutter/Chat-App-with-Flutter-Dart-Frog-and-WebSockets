@@ -1,3 +1,5 @@
+import 'package:chat_with_flutter_dart_frog_and_websockets/services/web_socket_client.dart';
+
 import 'repositories/message_repository.dart';
 import 'services/api_client.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +12,12 @@ final apiClient = ApiClient(tokenProvider: () async {
   return '';
 });
 
-final messageRepository = MessageRepository(apiClient: apiClient);
+final webSocketClient = WebSocketClient();
+
+final messageRepository = MessageRepository(
+  apiClient: apiClient,
+  webSocketClient: webSocketClient,
+);
 
 void main() {
   runApp(const MyApp());
@@ -32,8 +39,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-const userId1 = 'dea9782b-ffe8-4660-a554-5100127307d2';
-const userId2 = 'b74e326d-b37a-4c46-a8d4-0712021aadba';
+const userId1 = '33f771e2-311b-4d4f-9b14-d1e1c59936d3';
+const userId2 = '94a6b01e-319e-494e-b454-98f22ab0d109';
 
 final chatRoom = ChatRoom(
   id: '8d162274-6cb8-4776-815a-8e721ebfb76d',
@@ -67,22 +74,3 @@ final chatRoom = ChatRoom(
   ),
   unreadCount: 0,
 );
-
-final messages = [
-  Message(
-    id: 'de120f3a-dbca-4330-9e2e-18b55a2fb9e5',
-    chatRoomId: '8d162274-6cb8-4776-815a-8e721ebfb76d',
-    senderUserId: userId1,
-    receiverUserId: userId2,
-    content: 'Hey! I am good, thanks.',
-    createdAt: DateTime(2023, 12, 1, 1, 0, 10),
-  ),
-  Message(
-    id: '29829a84-30b9-47e9-b6df-518519843f7d',
-    chatRoomId: '8d162274-6cb8-4776-815a-8e721ebfb76d',
-    senderUserId: userId2,
-    receiverUserId: userId1,
-    content: 'Hey! How are you?',
-    createdAt: DateTime(2023, 12, 1, 1, 0, 0),
-  ),
-];

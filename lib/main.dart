@@ -1,11 +1,10 @@
-import 'package:chat_with_flutter_dart_frog_and_websockets/services/web_socket_client.dart';
-
-import 'repositories/message_repository.dart';
-import 'services/api_client.dart';
 import 'package:flutter/material.dart';
 import 'package:models/models.dart';
 
+import 'repositories/message_repository.dart';
 import 'screens/chat_room_screen.dart';
+import 'services/api_client.dart';
+import 'services/web_socket_client.dart';
 
 final apiClient = ApiClient(tokenProvider: () async {
   // TODO: Get the bearer token of the current user.

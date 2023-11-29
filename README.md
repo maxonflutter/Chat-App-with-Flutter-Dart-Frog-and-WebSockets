@@ -36,7 +36,6 @@ Welcome to the Grocery Shopping App with Flutter, Dart Frog and the BLoC Pattern
 |:---:|:---:|:---:|
 | Splash Screen  | Login Screen | Chat Room List Screen |
 | ![Chat Room](screenshots/chat_chat_room.png) |  |  |
-|:---:|:---:|:---:|
 | Chat Room Screen | | |
 
 

@@ -32,15 +32,12 @@ Welcome to the Grocery Shopping App with Flutter, Dart Frog and the BLoC Pattern
 
 
 ## App Screenshots: 
-|![Intro](screenshots/intro.png) | ![Login](screenshots/login.png) | ![Home](screenshots/home.png) |
+|![Intro](screenshots/chat_splash.png) | ![Login](screenshots/chat_login.png) | ![Chat Room Listing](screenshots/chat_chat_room_list.png) |
 |:---:|:---:|:---:|
-| Welcome Screen  | Login Screen | Home Screen |
-| ![Cart](screenshots/cart.png) | ![Category](screenshots/category.png) | ![Order History](screenshots/order_history.png) |
+| Splash Screen  | Login Screen | Chat Room List Screen |
+| ![Chat Room](screenshots/chat_chat_room.png) |  |  |
 |:---:|:---:|:---:|
-| Cart Screen | Category Screen with Bottom Sheet | Order History Screen|
-| ![Order Status](screenshots/order_status.png) | ![Search](screenshots/search.png) |  |
-|:---:|:---:|:---:|
-| Order Status Screen | Search Screen | |
+| Chat Room Screen | | |
 
 
 ## Getting Started

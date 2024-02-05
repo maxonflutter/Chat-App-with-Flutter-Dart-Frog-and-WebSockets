@@ -2,8 +2,8 @@
 
 Welcome to the Chat App with Flutter, Dart Frog and WebSocket project! This project aims to fully-functioning full-stack chat application with Flutter and Dart. The app uses a Dart Frog server, with a REST API and a WebSocket setup to handle the communication between the client and the database. 
 
-### Full code available at: ...
-### Video tutorial: https://youtu.be/by44X7SwYx0
+### YouTube tutorial: https://youtu.be/by44X7SwYx0
+### Full Tutorial available at: https://www.atomsbox.com/courses/84ffb4b3-b6e0-4831-a427-10e41b51f736
 
 ## Features
 

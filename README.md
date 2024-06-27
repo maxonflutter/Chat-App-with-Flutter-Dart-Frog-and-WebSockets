@@ -4,9 +4,6 @@ Welcome to the Chat App with Flutter, Dart Frog and WebSocket project! This proj
 
 - YouTube tutorial: https://youtu.be/by44X7SwYx0
 
-If you're looking for a more complete Chat App template:
-- EchoLink: A Chat app template: https://www.atomsbox.com/templates/echo-link
-
 ## Features
 1. **Splash Screen**: First page of the application with a smooth animation (from lottie)
 2. **Login Screen**: Login and register feature with Supabase Auth. It uses two auth provider: email & password and phone with OTP.
